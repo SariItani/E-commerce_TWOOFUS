@@ -1,0 +1,12 @@
+/* global CSS to inherit in each HTML */
+
+body {
+    background-color: aqua;
+    z-index: -1;
+    background-image: url("../static/c95fe165193105.5aeb8634185a0.png");
+}
+
+p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 6rem;
+}

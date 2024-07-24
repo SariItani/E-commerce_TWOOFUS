@@ -1,0 +1,13 @@
+/* Otherwise we need to override certain features or add new features specific to a page */
+
+body {
+    background-color: green;
+    background-image: none;
+}
+
+.button {
+    border-radius: 5px;
+    text-align: center;
+    border-color: aquamarine;
+    border-width: 1px;
+}
