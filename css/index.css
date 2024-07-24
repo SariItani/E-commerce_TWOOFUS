@@ -1,12 +1,19 @@
 /* global CSS to inherit in each HTML */
 
+/* CSS Color Pallette */
+:root {
+  --cambridge-blue: #8aa387;
+  --beige: #f5f5dc;
+  --lion: #a68a64;
+  --dark-moss-green: #556b2f;
+  --paynes-gray: #3a606e;
+}
+
 body {
-    background-color: aqua;
-    z-index: -1;
-    background-image: url("../static/c95fe165193105.5aeb8634185a0.png");
+    background-color: var(--beige);
 }
 
 p {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 6rem;
+    font-size: 2rem;
 }
