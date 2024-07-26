@@ -1,5 +1,14 @@
+/* CSS Color Pallette */
+:root {
+    --cambridge-blue: #8aa387;
+    --beige: #f5f5dc;
+    --lion: #a68a64;
+    --dark-moss-green: #556b2f;
+    --paynes-gray: #3a606e;
+  }
+
 body{
-    background-color: white;
+    background-color: var(--lion);
     background-image: none;
 }
 .Item-pic-price{
