@@ -1,0 +1,117 @@
+body{
+    background-color: white;
+    background-image: none;
+}
+.Item-pic-price{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 100px;
+}
+
+.pic img{
+    width: 450px;
+    
+}
+.pic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.price h3{
+    font-size: 25px;
+    font-weight: bold;
+    
+    
+}
+
+.price{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+
+}
+
+.size-input{
+    padding-bottom: 30px;
+}
+
+.quantity-input{
+    padding-bottom: 30px;
+}
+
+
+.favorite-add-btn button{
+    margin: 10px;
+}
+
+#size{
+    margin-left: 70px;
+    height: 30px;
+    border-radius: 10px;
+    
+}
+
+#quantity{
+    margin-left: 24px;
+    height: 30px;
+    border-radius:10px ;
+}
+
+
+.price button{
+   border-radius: 20px;
+   height: 30px;
+}
+
+
+.description p {
+    font-size: 14px;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.description h5{
+    font-size: 20px;
+    margin: 0;
+}
+.description{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+ .recomended{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+.rec-item{
+    display: flex;
+    width: 100px;
+    margin-left: 50px;
+}
+
+.rec-item p{
+    font-size: 14px;
+ }
+
+.rec-item img{
+    width: 150px;
+}
+
+.rec-product-info{
+    padding-left: 20px;
+}
+
+.product{
+    padding-top: 30px;
+    padding-left: 100px;
+}
+
