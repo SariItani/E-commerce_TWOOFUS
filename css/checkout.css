@@ -12,7 +12,7 @@
     align-items: center;
     padding: 25px;
     min-height: 100vh;
-    background: linear-gradient(90deg, #8aa387 60%, #556b2f 40%);
+    background-color: #a68a64; 
 }
 
 .container form {
@@ -25,7 +25,7 @@
 }
 
 .title {
-    color:  #a68a64;
+    color:#8aa387;
     margin-bottom: 10px;
     text-align: center;
     font-size: 1.5em;
