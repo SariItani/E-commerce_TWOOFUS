@@ -48,7 +48,7 @@
         </div>
       </nav>
       <div class="container">
-           <form>
+           <form id="checkoutForm">
                <div class="row">
                   <div class="col1">
                        <h3 class="title">Billing Address</h3>
@@ -79,37 +79,37 @@
                     </div>
                 </div>
             </div>
-
-            <div class="col2">
-                <h3 class="title">Payment</h3>
-                <div class="inputBox">
-                    <label>Name on card :</label>
-                    <input type="text" >
+            <label> Preferred payment method : </label>
+            <div class="methods">
+                <div class="method"> 
+                    <label>Cash on delivery</label>
+                    <img src="../static/cash-on-delivery.png" >
+                    <input type="radio" name="pay" id="cash">
                 </div>
-                <div class="inputBox">
-                    <label>Credit card number :</label>
-                    <input type="number" placeholder="1111-2222-3333-4444" required>
+                <div class="method">
+                    <label> Whish</label>
+                    <img class="icon" src="../static/whishmoney.png" >
+                    <input type="radio" name="pay" id="whish">
                 </div>
-                <div class="flex">
-                    <div class="inputBox">
-                        <label>Expiry date :</label>
-                        <input type="date"  required>
-                    </div>
-                    <div class="inputBox">
-                        <label>CVV :</label>
-                        <input type="text" placeholder="1234" required>
-                    </div>
-                    <div>
-                        <label>Total Amount:</label>
-                        <p id="amount"></p>
-                    </div>
-                    <input type="submit" value="Proceed to checkout" class="submit-btn">
+                <div class="method">
+                    <label>Card</label>
+                    <img src="../static/atm-card.png" >
+                    <input type="radio" name="pay" id="card">
+                </div>
+                <div class="method">
+                    <label> OMT</label>
+                    <img class="icon" src="../static/new_omt_logo.svg">
+                    <input type="radio" name="pay" id="omt">
                 </div>
             </div>
+            <div class="col2">
+                <label>Total Amount:</label>
+                <p id="amount"></p>
+            </div>
+                <input type="submit" value="Checkout" class="submit-btn">
+            </div>
         </div>
-    </form>
-    
-</div>    
+    </form>   
 <script src="../js/checkout.js"></script> 
 </body>
 <script src="../js/index.js"></script>
