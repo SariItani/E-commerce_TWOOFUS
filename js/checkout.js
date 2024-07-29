@@ -8,3 +8,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     totalAmount.innerHTML = getTotal() + "$";
 });
+
+document.getElementById('checkoutForm').addEventListener('submit', function(event){
+    event.preventDefault(); 
+    const paymentMethod = document.querySelector('input[name="pay"]:checked');
+    if (paymentMethod){
+        if (paymentMethod.id=== 'card') {
+            window.location.href = '../templates/payByCard.html';
+        } else {
+            window.location.href= '../templates/orderComplete.html';
+        }
+    } else {
+        alert('Please select a payment method.');
+    }
+});
+
