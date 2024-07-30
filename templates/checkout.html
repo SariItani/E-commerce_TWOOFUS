@@ -48,38 +48,40 @@
         </div>
       </nav>
       <div class="container">
-           <form id="checkoutForm">
-               <div class="row">
-                  <div class="col1">
-                       <h3 class="title">Billing Address</h3>
-                <div class="inputBox">
-                    <label>Full name :</label>
-                    <input type="text" required>
-                </div>
-                <div class="inputBox">
-                    <label>Email :</label>
-                    <input type="email" placeholder="example@example.com" required>
-                </div>
-                <div class="inputBox">
-                    <label>Address :</label>
-                    <input type="text" id="add" placeholder="room - street - locality" required>
-                </div>
-                <div class="inputBox">
-                    <label>City :</label>
-                    <input type="text" placeholder="Los Angeles" required >
-                </div>
-                <div class="flex">
+        <form id="checkoutForm">
+            <div class="row">
+                <div class="col1">
+                    <h3 class="title">Billing Address</h3>
                     <div class="inputBox">
-                        <label>State :</label>
-                        <input type="text" placeholder="California" required>
+                        <label for="fullname">Full name :</label>
+                        <input type="text" id="fullname" placeholder="John M. Doe" required>
                     </div>
                     <div class="inputBox">
-                        <label>Zip code :</label>
-                        <input type="text" placeholder="123 456" required>
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" placeholder="john@example.com" required>
+                    </div>
+                    <div class="inputBox">
+                        <label for="address">Address :</label>
+                        <input type="text" id="address" placeholder="Room - Street - Locality" required>
+                    </div>
+                    <div class="inputBox">
+                        <label for="city">City :</label>
+                        <input type="text" id="city" placeholder="Mumbai" required>
+                    </div>
+                    <div class="flex">
+                        <div class="inputBox">
+                            <label for="state">State :</label>
+                            <input type="text" id="state" placeholder="India" required>
+                        </div>
+                        <div class="inputBox">
+                            <label for="zip">Zip code :</label>
+                            <input type="text" id="zip" placeholder="123 456" required>
+                        </div>
                     </div>
                 </div>
             </div>
-            <label> Preferred payment method : </label>
+            
+            <!-- Payment methods section -->
             <div class="methods">
                 <div class="method"> 
                     <label>Cash on delivery</label>
@@ -102,14 +104,12 @@
                     <input type="radio" name="pay" id="omt">
                 </div>
             </div>
-            <div class="col2">
-                <label>Total Amount:</label>
-                <p id="amount"></p>
-            </div>
-                <input type="submit" value="Checkout" class="submit-btn">
-            </div>
-        </div>
-    </form>   
+        
+            <h2 class="title">Total Amount: <span id="amount"></span></h2>
+        
+            <input type="submit" value="Proceed to Checkout" class="submitbtn">
+        </form>
+    </div> 
 <script src="../js/checkout.js"></script> 
 </body>
 <footer>
