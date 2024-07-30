@@ -17,7 +17,8 @@ function addToCart() {
   const size = document.getElementById('size').value;
   const quantity = document.getElementById('quantity').value;
 
-  if (size === 'Select') {
+  // Error detection for size selection
+  if (size === '' || size === 'Select') {
     alert('Please select a size');
     return;
   }
@@ -27,7 +28,8 @@ function addToCart() {
     name: tea.name,
     price: tea.price,
     size: size,
-    quantity: parseInt(quantity)
+    quantity: parseInt(quantity),
+    image: tea.image // Add the image to the cart item
   };
 
   const existingItemIndex = cart.findIndex(item => item.id === cartItem.id && item.size === cartItem.size);

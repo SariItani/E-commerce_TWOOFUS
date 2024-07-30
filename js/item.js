@@ -36,19 +36,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
         filteredTeas.forEach(recommendedTea => {
           const recContainer = document.createElement('div');
-          recContainer.classList.add('rec-item'); // for each recommended image we will create a div 
-          recContainer.innerHTML = recommendedTea.image; 
+          recContainer.classList.add('rec-item');
+          recContainer.innerHTML = recommendedTea.image; // Set the innerHTML directly
           const recImg = recContainer.querySelector('img');
-
-          const recName = document.createElement('p'); //to add the name of the tea below each image 
+        
+          const recName = document.createElement('p');
           recName.textContent = recommendedTea.name;
           recContainer.appendChild(recName);
           
           recImg.addEventListener('click', () => {
-              localStorage.setItem('selectedTea', JSON.stringify(recommendedTea)); 
-              location.reload();
+            localStorage.setItem('selectedTea', JSON.stringify(recommendedTea)); 
+            location.reload();
           });
-          recommendations.appendChild(recContainer); //and then attach it to the main div 
+          recommendations.appendChild(recContainer);
         });
 
 
