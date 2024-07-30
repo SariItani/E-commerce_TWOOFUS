@@ -75,3 +75,14 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .catch(error => console.error('Error loading the JSON file:', error));
 });
+
+
+function toggle() {
+  const button = document.getElementById("favoriteBtn");
+  if (button.className === ""){
+    button.className = "red";
+  }
+  else{
+    button.className = "";
+  }
+}

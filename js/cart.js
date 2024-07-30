@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const quantityInput = document.getElementById('quantity');
 
   addToCartBtn.addEventListener('click', addToCart);
-  favoriteBtn.addEventListener('click', addToFavorites);
 });
 
 function addToCart() {
@@ -42,9 +41,4 @@ function addToCart() {
 
   localStorage.setItem('cart', JSON.stringify(cart));
   alert('Item added to cart!');
-}
-
-function addToFavorites() {
-  // Implement favorite functionality here
-  alert('Favorite functionality not implemented yet');
 }
