@@ -1,93 +1,70 @@
-/* global CSS to inherit in each HTML */
 
-/* CSS Color Pallette */
 :root {
   --cambridge-blue: #8aa387;
   --beige: #f5f5dc;
   --lion: #a68a64;
   --dark-moss-green: #556b2f;
   --paynes-gray: #3a606e;
-  --white: #ffffffec;
-}
-
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  font-family: Arial, sans-serif;
-  background-color: var(--lion);
+    background-color: #ffffffec;
 }
 
-main {
-  flex: 1;
-}
-
-p {
-    font-family: 'Times New Roman', Times, serif;
+p{
+    font-family:  Arial, sans-serif;
     font-size: 2rem;
 }
 
-.homePage-list h1 {
+.homePage-list h1{
   text-align: center;
   margin-top: 30px;
   color: #3A606E;
 }
 
-#teaList {
+#teaList{
   display: flex;
-  flex-direction: column;
+  flex-direction: column ;
   justify-content: center;
   align-items: center;
   margin-top: 50px;
 }
 
-#teaList h2 {
-  font-size: 35px;
-  text-align: center;
-  color: #3A606E;
+#teaList h2{
+font-size: 35px;
+text-align: center;
+color:#3A606E;
 }
 
-.items {
+.items{
   display: flex;
   flex-wrap: wrap;
-  margin-top: 50px;
+  margin-top: 50px ;
   margin-bottom: 50px;
   margin-right: 30px;
-  border: 1px solid #556b2f;
+  border: 1px solid #556b2f ;
   border-radius: 10px;
 }
 
-.items img {
+.items img{
   margin: 50px;
 }
 
-.items img:hover {
+.items img:hover{
   width: 260px;
 }
 
-.name {
+.name{
   position: relative;
   top: 153px;
   font-size: 20px;
   color: #3A606E;
 }
 
-.price {
-  margin-left: 20px;
+.price{
+  margin-left:20px ;
   font-size: 21px;
   color: #3A606E;
-}
-
-footer {
-  background-color: black;
-  color: white;
-  text-align: center;
-  padding: 10px;
 }
 
 #serachbar {
@@ -99,4 +76,63 @@ footer {
   margin-right: 25px;
   margin-left: 25px; 
   color:#f5f5dc !important;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 0;
+}
+
+.container1 {
+  max-width: 1200px;
+  margin:0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  min-width:200px;
+  margin:20px;
+}
+
+.social-icons, .footer-section ul{
+  list-style: none;
+  padding: 0;
+}
+
+.social-icons li, .footer-section ul li{
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.footer-section ul a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-section ul a:hover{
+  color:#8aa387;
+}
+
+.footer-section ul li i{
+  margin-right: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+}
+
+.footer-bottom p {
+  margin: 0;
 }
