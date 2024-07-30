@@ -10,7 +10,7 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- Nav -->
+    <!-- Nav --> 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="./index.html">
@@ -41,29 +41,34 @@
             </ul>
             <div class="d-flex">
               <input id="serachbar" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit" onclick="search()">Search</button>
+              <button class="btn btn-success" type="submit" onclick="search()">Search</button>
             </div>
           </div>
         </div>
       </nav>
-    <!-- Content: Manar -->
 
+      
     <p id="temp"></p>
-    <p>Example Text <i class="fa fa-user" aria-hidden="false"></i></p>
-    <div class="rec-item">
-    <div class="product">
-        <div class="rec-product-img">
-            <a href="../templates/tumericMatcha.html"><img src="../static/Turmeric_Matcha_1.png" ><br></a>
+    
+    <!-- Content: Manar -->
+    
+    <!-- Saja's Trials-->
+      <div class="homePage-list">
+        <h1>Tea List</h1>
         
-        </div>
-        <div class="rec-product-info">
-            <p>TUMERIC MATCHA</p><br>
-            <p>15.00$</p>  
-        </div>
-        </div>
-    </div>
+        <ul id="teaList"></ul>  <!--This is to load all the tea types present (the same logic may be followed later if we want to put them in categories (this will be done for each category))-->
+        <!--This is to style the image that will be displayed for each type   --> <style>    
+        .tea-image {
+          width: 250px;
+          height: auto;
+          cursor: pointer;
+        }
+      </style>
+  <!--End of them -->
+      </div>
+    
 </body>
-<footer style="background-color: black;">
+<footer>
     <div class="container">
         <p><i class="fa fa-twitter"></i> Follow</p>
     </div>
