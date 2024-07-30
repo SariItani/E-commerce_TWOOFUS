@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/Item.css">
     <link rel="stylesheet" href="../css/home.css">
@@ -25,6 +26,9 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="./cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart</a>
+            </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Account
@@ -36,9 +40,7 @@
                   <li><a class="dropdown-item" href="#">Logout <i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
                 </ul>
               </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="./cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart</a>
-            </li>
+             
             </ul>
             <div class="d-flex">
               <input id="serachbar" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -49,7 +51,6 @@
       </nav>
 
       
-    <p id="temp"></p>
     
     <!-- Content: Manar -->
     <main>
@@ -122,19 +123,43 @@
             <h2></h2>
             <div class="product-grid">
                 <a href="green-tea.html" class="product-card">
-                    <img src="tea1.jpg" alt="Tea 1">
-                    <h3>Green Tea</h3>
-                    <p>$12.99</p>
+                    <img src="../static/Screenshot 2024-07-30 220832.png" alt="Tea 1">
+                    <h3>Fruit Blends</h3>
+                    <p> A burst of flavor packed with vitamins, </p>
+                      <p>antioxidants, and refreshing hydration</p>
                 </a>
                 <a href="black-tea.html" class="product-card">
-                    <img src="tea2.jpg" alt="Tea 2">
-                    <h3>Black Tea</h3>
-                    <p>$14.99</p>
+                    <img src="../static/Screenshot 2024-07-30 222851.png" alt="Tea 2">
+                    <h3>Matcha Blends</h3>
+                    <p>Elevate your day with sustained energy,</p>
+                      <p> mental clarity, and immune-boosting properties</p>
                 </a>
                 <a href="oolong-tea.html" class="product-card">
-                    <img src="tea3.jpg" alt="Tea 3">
-                    <h3>Oolong Tea</h3>
-                    <p>$16.99</p>
+                    <img src="../static/Screenshot 2024-07-30 222401.png" alt="Tea 3">
+                    <h3>Herbal Tea</h3>
+                    <p> Embrace wellness with calming effects,</p>
+                     <p> improved digestion, and rich antioxidants</p>
+                </a>
+            </div>
+             <h2></h2>
+            <div class="product-grid">
+                <a href="green-tea.html" class="product-card">
+                    <img src="../static/Screenshot 2024-07-30 224004.png" alt="Tea 1">
+                    <h3>Rooibos & Honey Bush</h3>
+                    <p> Naturally caffeine-free, boosts immunity, </p>
+                      <p>promotes healthy skin, and supports bone health.</p>
+                </a>
+                <a href="black-tea.html" class="product-card">
+                    <img src="../static/Screenshot 2024-07-30 224610.png" alt="Tea 2">
+                    <h3>Premium Oolong</h3>
+                    <p> Combines the benefits of green and black tea :</p>
+                      <p> balanced energy, skin health, and antioxidant.</p>
+                </a>
+                <a href="oolong-tea.html" class="product-card">
+                    <img src="../static/Screenshot 2024-07-30 224811.png" alt="Tea 3">
+                    <h3>Other</h3>
+                    <p>Discover a world of flavors and benefits with </p>
+                     <p> our diverse tea selection.</p>
                 </a>
             </div>
         </div>
@@ -144,29 +169,6 @@
     
     </section>
 </main>
-<footer>
-    <div class="container">
-        <p>&copy; 2024 Tea House. All rights reserved.</p>
-    </div>
-</footer>
-</body>
-</html>
-    <!-- Saja's Trials-->
-      <div class="homePage-list">
-        <h1>Tea List</h1>
-        
-        <ul id="teaList"></ul>  <!--This is to load all the tea types present (the same logic may be followed later if we want to put them in categories (this will be done for each category))-->
-        <!--This is to style the image that will be displayed for each type   --> <style>    
-        .tea-image {
-          width: 250px;
-          height: auto;
-          cursor: pointer;
-        }
-      </style>
-  <!--End of them -->
-      </div>
-    
-</body>
 <footer>
   <div class="container1">
     <div class="footer-section">
