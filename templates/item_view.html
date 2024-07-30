@@ -52,36 +52,33 @@
   <div class="Item-pic-price">
     
     <div id="teaImage" class ="pic"></div>
-
+<!-- Sari Started Editing Here -->
     <div class="price">
-  <h1 id="teaName"></h1>
- 
-  <p id="teaPrice"></p>
-  
-  <form id="priceForm">
-    <div class="size-input">
-        
+      <h1 id="teaName"></h1>
+      <p id="teaPrice"></p>
+      
+      <div class="size-input">
         <label for="size">SIZE:</label>
         <select id="size" name="size">
-            <option value="Select" disabled>Select a Size</option>
-            <option value="50">50g</option>
-            <option value="100">100g</option>
-            <option value="200">200g</option>
+          <option value="Select" disabled selected>Select a Size</option>
+          <option value="50">50g</option>
+          <option value="100">100g</option>
+          <option value="200">200g</option>
         </select>
-    </div>
+      </div>
         
-    <div class="quantity-input">
-        <label for="quantity">QUNATITY:</label>
-        <input type="number" name="quantity" id="quantity" max="10" min="1">
+      <div class="quantity-input">
+        <label for="quantity">QUANTITY:</label>
+        <input type="number" name="quantity" id="quantity" max="10" min="1" value="1">
+      </div>
+    
+      <div class="favorite-add-btn">
+        <button id="favoriteBtn">♡</button>
+        <button id="addToCartBtn">Add To Cart</button>
+      </div>
     </div>
-
-    <div class="favorite-add-btn">
-        <button>♡</button>
-        <button>Add To Cart</button>
-    </div>
-     
- </form>
-</div></div>
+  <!-- Here sari's edits ended -->
+  </div>
 
 
 
@@ -104,8 +101,9 @@
 </div>
 
 
-
+  <script src="../js/index.js"></script> <!-- Always add the index js and css files -->
   <script src="../js/item.js"></script>
+  <script src="../js/cart.js"></script>
 </body>
 <footer>
   <div class="container">
