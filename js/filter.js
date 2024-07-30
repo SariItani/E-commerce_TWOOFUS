@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const sampleData = {
         greentea: [
-            { id: 1, name: "Cinnamon Orange Green tea", price: "15$", image: "../stati/CinnamonOrange.png" },
+            { id: 1, name: "Cinnamon Orange Green tea", price: "15$", image: "../static/CinnamonOrange.png" },
             { id: 2, name: "Turmeric Matcha", price: "15$", image: "../static/Turmeric_Matcha.png" },
             { id: 3, name: "Earl Grey Green Tea", price: "15$", image: "../static/EarlGreyGreen.jpg" },
             { id: 4, name: "Ginger Pineapple Green Tea", price: "15$", image: "../static/GingerPineApple.jpg" },
