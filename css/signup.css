@@ -1,13 +1,77 @@
 /* Otherwise we need to override certain features or add new features specific to a page */
 
-body {
-    background-color: green;
-    background-image: none;
+
+
+.signup-container {
+    min-width: 100%;
+    padding: 10%;
+    padding-top:40px;
+    margin :0 auto;
 }
 
-.button {
-    border-radius: 5px;
-    text-align: center;
-    border-color: aquamarine;
-    border-width: 1px;
+.signup-container h2 {
+    font-size: 30px;
+    color: #333;
+    text-align: left;
+    padding-left:5%;
+    margin-top: 30px;
+    margin-bottom: 40px;
+
 }
+
+.signup-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+#signupForm{
+    max-width: 90%;
+    margin: 0 auto;
+}
+.signup-container input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    font-size: 14px;
+    outline: none;
+}
+.signup-container input:hover{
+border-bottom: 1px solid #333;
+}
+.signup-container button {
+    width: 98%;
+    padding: 10px;
+    
+    margin: 20px 1% 5px 1%;
+    background-color: #28a745;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+}
+.social-signup{
+    max-width: 90%;
+    margin: 0 auto;
+}
+.signup-container .social-signup button {
+   
+    background-color: #4267B2;
+    margin: 5px 1%;
+}
+
+
+#googleSignup {
+    background-color: #db4437;
+}
+.error-message {
+    color: red;
+    font-size: 12px;
+    
+}
+.done{
+    background-color: #74e38e;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    
+    }
