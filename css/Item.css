@@ -169,3 +169,11 @@ p{
     padding-top: 30px;
     padding-left: 100px;
   }
+
+  .favorite-add-btn .red {
+    background-color: red;
+  }
+
+  .favorite-add-btn:hover .red {
+    background-color: darkred;
+  }
