@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,90 +9,185 @@
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/category.css">
     <title>Category</title>
+    <style>
+       
+    </style>
 </head>
+
 <body>
-    <!-- Nav --> 
+    <!-- Nav -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="./index.html">
                 <img src="../static/logo.png" alt="" width="100" height="100">
-              </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Account
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="./signup.html"><i class="fa fa-user" aria-hidden="true"></i> Sign Up</a></li>
-                  <li><a class="dropdown-item" href="./login.html"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Logout <i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Account
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./signup.html"><i class="fa fa-user" aria-hidden="true"></i> Sign Up</a></li>
+                            <li><a class="dropdown-item" href="./login.html"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Logout <i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart</a>
+                    </li>
                 </ul>
-              </li>
-              <p id="temp"></p>
-              
-              <li class="nav-item">
-                <a class="nav-link active" href="./cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart</a>
-            </li>
-            </ul>
-            <div class="d-flex">
-              <input id="serachbar" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-success" type="submit" onclick="search()">Search</button>
+                <div class="d-flex">
+                    <input id="serachbar" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-success" type="submit" onclick="search()">Search</button>
+                </div>
             </div>
-          </div>
         </div>
-      </nav>
+    </nav>
 
     <!-- Content: Manar -->
+    <h1 id="category-title">Category View</h1>
+    <div class="product-grid" id="content"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const category = urlParams.get('category');
 
-    <div>
-        <!-- content will be loaded dynamically here -->
-    </div>
+            const categories = {
+              green: [
+            { name: 'CINNAMON ORANGE GREEN TEA', price: '$15', img: '../static/CinnamonOrange.png' },
+            { name: 'TURMERIC MATCHA GREEN TEA', price: '$15', img: '../static/Turmeric_Matcha.png' },
+            { name: 'EARL GREY GREEN TEA', price: '$15', img: '../static/EarlGreyGreen.png' },
+            { name: 'GINGER PINEAPPLE GREEN TEA', price: '$12', img: '../static/GingerPineApple.png' },
+            { name: 'VITALITEA’L GREEN TEA', price: '$14', img: '../static/Vitality.png' },
+            { name: 'MATCHA BERRIES GREEN TEA', price: '$14', img: '../static/Matcha_Berries.png' },
+            
+        ],
+                black: [
+                    { name: 'BLACK CURRANT SENCHA BLACK TEA', price: '$10', img: '../static/BlueFlower.png' },
+                    { name: 'VANILLA CLASSIC BLACK TEA', price: '$15', img: '../static/VANILLA-CLASSIC.png' },
+                    { name: 'FINEST GOLDEN TIPS PREMIUM BLACK TEA', price: '$20', img: '../static/Golden.png' }
+                ],
+                white: [
+                    { name: 'SILVER NEEDLE WHITE TEA', price: '$30', img: '../static/Silver_needle.png' },
+                    { name: 'WHITE SILK WHITE TEA', price: '$15', img: '../static/White_Silk.png' },
+                    { name: '"WHITE WINGS WHITE TEA', price: '$18', img: '../static/White_Wing.png' }
+                ],
+                fruit: [
+                    { name: 'MIXED BERRIES FRUIT BLEND', price: '$15', img: '../static/mixed-berries.png' },
+                  
+                ],
+                matcha: [
+                    { name: 'ORGANIC MATCHA PREMIUM JAPANESE GREEN TEA', price: '$38', img: '../static/MATCHA.png' },
+                    { name: 'TURMERIC MATCHA TEA', price: '$15', img: '../static/Turmeric_Matcha.png' },
+                    
+                ],
+                herbal: [
+                    { name: 'BALANCE HERBAL INFUSION', price: '$15', img: '../static/HerbalBalance.png' },
+                    { name: 'ESCAPE TO NATURE HERBAL INFUSION', price: '$15', img: '../static/Escape.png' },
+                    { name: 'SIMPLY TEA TOX HERBAL INFUSION', price: '$15', img: '../static/Simply_1.png' },
+                    { name: 'WELL BEING HERBAL INFUSION', price: '$15', img: '../static/Wellbeing.png' },
+                   
+                ],
+                rooibos: [
+                    { name: 'HONEY BUSH', price: '$10', img: '../static/HoneyBush.png' },
+                    { name: 'ROOIBOS BLOSSOM', price: '$15', img: '../static/Blossom.png' },
+                    { name: 'SPICY ROOIBOS', price: '$20', img: '../static/SpicyRooibois.png' }
+                ],
+                oolong: [
+                    { name: 'ROYAL ORCHID PREMIUM OOLONG TEA', price: '$30', img: '../static/Royal_Orchid.png' },
+                  
+                ],
+                other: [
+                    { name: '', price: '$10', img: '../static/other-tea-1.jpg' },
+                    
+                ]
+            };
+
+            if (category && categories[category]) {
+                document.getElementById('category-title').textContent = category.charAt(0).toUpperCase() + category.slice(1) + ' Tea';
+
+                const shuffledContent = categories[category].sort(() => 0.5 - Math.random());
+                const contentDiv = document.getElementById('content');
+
+                shuffledContent.forEach(item => {
+                    const card = document.createElement('div');
+                    card.className = 'product-card';
+
+                    const img = document.createElement('img');
+                    img.src = item.img;
+                    img.alt = item.name;
+
+                    const title = document.createElement('h3');
+                    title.textContent = item.name;
+
+                    const price = document.createElement('p');
+                    price.textContent = item.price;
+
+                    const button = document.createElement('button');
+                    button.className = 'btn btn-primary';
+                    button.textContent = 'Buy Now';
+                    button.addEventListener('click', () => {
+                        alert(`You clicked on ${item.name}`);
+                    });
+
+                    card.appendChild(img);
+                    card.appendChild(title);
+                    card.appendChild(price);
+                    card.appendChild(button);
+                    contentDiv.appendChild(card);
+                });
+            } else {
+                document.getElementById('content').textContent = 'Category not found.';
+            }
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container1">
+        <div class="footer-section">
+          <ul class="social-icons">
+            <li><a href="https://facebook.com" target="_blank"><i class="fa fa-facebook"></i> Facebook</a></li>
+            <li><a href="https://instagram.com" target="_blank"><i class="fa fa-instagram"></i> Instagram</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <ul>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Refunds & Replacement</a></li>
+            <li><a href="#">About Tea House </a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <ul>
+            <li><i class="fa fa-map-marker"></i>First Branch Location</li>
+            <li><i class="fa fa-map-marker"></i>Second Branch Location</li>
+            <li><i class="fa fa-phone"></i> 00961 71 806438</li>
+            <li><i class="fa fa-envelope"></i> tea@teahouse.com</li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <ul>
+            <li>Shipping All Over Lebanon</li>
+            <li>Delivery within two working days.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright Tea House | by Mr. Website</p>
+      </div>
+    </footer>
+    <script src="../js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     
-</body>
-<footer>
-  <div class="container1">
-    <div class="footer-section">
-      <ul class="social-icons">
-        <li><a href="https://facebook.com" target="_blank"><i class="fa fa-facebook"></i> Facebook</a></li>
-        <li><a href="https://instagram.com" target="_blank"><i class="fa fa-instagram"></i> Instagram</a></li>
-      </ul>
-    </div>
-    <div class="footer-section">
-      <ul>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Refunds & Replacement</a></li>
-        <li><a href="#">About Tea House </a></li>
-      </ul>
-    </div>
-    <div class="footer-section">
-      <ul>
-        <li><i class="fa fa-map-marker"></i>First Branch Location</li>
-        <li><i class="fa fa-map-marker"></i>Second Branch Location</li>
-        <li><i class="fa fa-phone"></i> 00961 71 806438</li>
-        <li><i class="fa fa-envelope"></i> tea@teahouse.com</li>
-      </ul>
-    </div>
-    <div class="footer-section">
-      <ul>
-        <li>Shipping All Over Lebanon</li>
-        <li>Delivery within two working days.</li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>Copyright Tea House | by Mr. Website</p>
-  </div>
-</footer>
-<script src="../js/index.js"></script>
-<script src="../js/category.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-</html>
+    </html>
