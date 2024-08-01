@@ -1,14 +1,25 @@
-function search() { // place holder function for search functionality
+function search() {
   var searchbar = document.getElementById("serachbar");
-  var search_string = searchbar.value;
-  console.log(search_string);
-  var temp = document.getElementById("temp");
-  temp.textContent = search_string
+  var searchString = searchbar.value.trim().toLowerCase();
+  window.location.href = `search.html?q=${encodeURIComponent(searchString)}`;
 }
 
 
+
 //related to saja and ali's part 
-document.addEventListener('DOMContentLoaded', () => { //fetching the whole json doc didn't work i don't know why 
+document.addEventListener('DOMContentLoaded', () => {
+  // Search bar input field
+  const searchbar = document.getElementById("serachbar");
+
+  // Add event listener for the Enter key
+  searchbar.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter') { // Check if the Enter key is pressed
+          event.preventDefault(); // Prevent the default action (form submission)
+          search(); // Call the search function
+      }
+  });
+  
+  //fetching the whole json doc didn't work i don't know why 
   fetch('./teatypes.JSON')
   .then(response => response.json())
   .then(sampleData => {

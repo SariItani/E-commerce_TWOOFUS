@@ -17,24 +17,6 @@
       "category": "GREEN TEA"
     },
     {
-      "id": 2,
-      "name": "TURMERIC MATCHA",
-      "price": "15.00 $",
-      "description": "whether you’re trying to lose weight or just enjoy the naturally wholesome flavors, allow this tea to become the cherry on top for your healthy journey.",
-      "how_to_prepare": "Pour 100 °C water over 1.5 grams of tea leaves per cup and infuse for 3 minutes. Remove leaves and enjoy.",
-      "ingredients": "Matcha, turmeric, ginger, lemongrass, liquorice roots, orange peel and lemon peel",
-      "benefits": [
-        "boosts energy level",
-        "detoxifies the body",
-        "aids in weight loss",
-        "boosts immunity",
-        "prevents arthritis and rheumatism",
-        "boosts brain function"
-      ],
-      "image": "<img src=\"../static/Turmeric_Matcha.png\" >",
-      "category": "GREEN TEA"
-    },
-    {
       "id": 3,
       "name": "EARL GREY GREEN TEA",
       "price": "15.00 $",

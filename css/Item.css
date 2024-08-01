@@ -1,179 +1,177 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffffec;
+  margin: 0;
+  padding: 0;
+}
 
+p {
+  color: #555;
+  line-height: 1.6;
+}
 
-body{
-    font-family: Arial, sans-serif;
-    background-color: #ffffffec;
-    margin: 0;
-    padding: 0;
+.Item-pic-price {
+  display: flex;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin: 20px;
+  border-radius: 8px;
+  flex-wrap: wrap;
 }
-  
-p{
-    color: #555;
-    line-height: 1.6;
-}
-  
-.Item-pic-price{
-    display: flex;
-    padding: 20px;
-    background-color:#fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin: 20px;
-    border-radius: 8px;
-    flex-wrap: wrap;
-}
-  
-#teaImage img{
-    width: 300px;
-    height: auto;
-    border-radius:8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-  
-  
-.price{
-    margin-left:20px;
-    flex: 1;
-}
-  
-.price h1{
-    margin-top: 0;
-    color:#556b2f;
-}
-  
-.price p{
-    font-size: 1.5em;
-    color: #556b2f;
-}
-  
-  #priceForm{
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 20px;
-  }
-  
-  .size-input, .quantity-input {
-    flex: 1 1 100%;
-    margin-bottom: 10px;
-  }
-  
-  .size-input input, .quantity-input input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  
-  .favorite-add-btn {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .favorite-add-btn button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    background-color: #556b2f;
-    color: #fff;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-  
-  .favorite-add-btn button:hover {
-    background-color:#8aa387 ;
-  }
-  
-  .description {
-    padding: 10px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin: 20px;
-    border-radius: 8px;
-    font-size: 0.9em;
-  }
-  
-  .description h5 {
-    margin-bottom: 5px;
-    color: #a68a64;
-    font-size: 1.3em;
-  }
-  
-  .description p {
-    margin: 5px 0;
-    line-height: 1.4; 
-    font-size:1.1em;
-  }
-  
-  
-  
-  #teaBenefits {
-    display: flex;
-    gap: 10px; 
-    flex-wrap: wrap; 
-  }
-  
-  .description ul {
-    font-size: 14px;
-    margin: 0;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-  .description h5{
-    font-size: 20px;
-    margin: 0;
-  }
-  .description{
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .recommended {
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  #recommendations {
-    display: flex;
-    gap: 50px; 
-    margin-top: 30px; 
-  }
-  
-  
-  .rec-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-         cursor: pointer; 
-      }
-  
-  .rec-item p{
-    font-size: 14px;
-  }
-  
-  .rec-item img{
-    width: 250px;
-  }
-  
-  .rec-product-info{
-    padding-left: 20px;
-  }
-  
-  .product{
-    padding-top: 30px;
-    padding-left: 100px;
-  }
 
-  .favorite-add-btn .red {
-    background-color: red;
-  }
+#teaImage img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
 
-  .favorite-add-btn:hover .red {
-    background-color: darkred;
-  }
+.price {
+  margin-left: 20px;
+  flex: 1;
+}
+
+.price h1 {
+  margin-top: 0;
+  color: #556b2f;
+}
+
+.price p {
+  font-size: 1.5em;
+  color: #556b2f;
+}
+
+#priceForm {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.size-input, .quantity-input {
+  flex: 1 1 100%;
+  margin-bottom: 10px;
+}
+
+.size-input input, .quantity-input input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.favorite-add-btn {
+  display: flex;
+  gap: 10px;
+}
+
+.favorite-add-btn button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #556b2f;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.favorite-add-btn button:hover {
+  background-color: #8aa387;
+}
+
+.description {
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin: 20px;
+  border-radius: 8px;
+  font-size: 0.9em;
+}
+
+.description h5 {
+  margin-bottom: 5px;
+  color: #a68a64;
+  font-size: 1.3em;
+}
+
+.description p {
+  margin: 5px 0;
+  line-height: 1.4;
+  font-size: 1.1em;
+}
+
+/* Updated teaBenefits section */
+#teaBenefits {
+  display: block; /* Removed flex display */
+  text-align: center; /* Center align text */
+  margin-top: 10px;
+}
+
+.description ul {
+  font-size: 14px;
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.description h5 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.description {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.recommended {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#recommendations {
+  display: flex;
+  gap: 50px;
+  margin-top: 30px;
+}
+
+.rec-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.rec-item p {
+  font-size: 14px;
+}
+
+.rec-item img {
+  width: 250px;
+}
+
+.rec-product-info {
+  padding-left: 20px;
+}
+
+.product {
+  padding-top: 30px;
+  padding-left: 100px;
+}
+
+.favorite-add-btn .red {
+  background-color: red;
+}
+
+.favorite-add-btn:hover .red {
+  background-color: darkred;
+}
