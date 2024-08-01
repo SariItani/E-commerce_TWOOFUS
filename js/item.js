@@ -4,8 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
   fetch('./teatypes.JSON')
     .then(response => response.json())
     .then(sampleData => {
-      console.log("Sample Data:");
-      console.log(sampleData);
       
       const tea = JSON.parse(localStorage.getItem('selectedTea')); // we've retreived what we set in index.js and parse it back into a json object
       if (tea) { // if the obj was succ retreived 
