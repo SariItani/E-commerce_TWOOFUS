@@ -75,3 +75,16 @@ border-bottom: 1px solid #333;
     font-size: 20px;
     
     }
+
+    .lost-password {
+        display: block;
+        margin-top: 15px;
+        font-size: 14px;
+        color: #333;
+        text-decoration: none;
+        text-align: left;
+    }
+    
+    .lost-password:hover {
+        text-decoration: underline;
+    }
