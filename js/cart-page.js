@@ -1,4 +1,3 @@
-// cart-page.js
 
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
@@ -33,7 +32,7 @@ function displayCart() {
                         <div class="card-body">
                             <h5 class="card-title">${item.name}</h5>
                             <p class="card-text">Size: ${item.size}g</p>
-                            <p class="card-text">Price: $${item.price}</p>
+                            <p class="card-text">Price: ${item.price}</p>
                             <div class="input-group mb-3" style="max-width: 200px;">
                                 <button class="btn btn-outline-secondary" type="button" onclick="updateQuantity(${index}, -1)">-</button>
                                 <input type="text" class="form-control text-center" value="${item.quantity}" readonly>
@@ -70,10 +69,8 @@ function removeItem(index) {
 }
 
 function updateOrderSummary() {
-    // TODO: Update this function when price and quantity are changed to integer values
-    // For now, we'll convert the price to a float to ensure proper calculation
     const subtotal = cart.reduce((total, item) => total + parseFloat(item.price) * item.quantity, 0);
-    const discount = 0; // You can implement a discount logic here
+    const discount = subtotal > 100 ? subtotal * 0.1 : 0; // 10% discount for orders over $100
     const deliveryTaxes = subtotal > 0 ? 5 : 0; // Example: $5 flat rate for delivery and taxes
     const finalTotal = subtotal - discount + deliveryTaxes;
 
@@ -81,6 +78,12 @@ function updateOrderSummary() {
     document.getElementById('discount').textContent = discount.toFixed(2);
     document.getElementById('deliveryTaxes').textContent = deliveryTaxes.toFixed(2);
     document.getElementById('finalTotal').textContent = finalTotal.toFixed(2);
+    const checkoutLink = document.getElementById('checkoutBtn');
+    if (subtotal <= 0) {
+        checkoutLink.removeAttribute('href'); 
+    } else {
+        checkoutLink.setAttribute('href', './checkout.html'); 
+    }
 }
 
 function clearCart() {
@@ -92,4 +95,37 @@ function clearCart() {
     setTimeout(() => {
         window.location.href = 'index.html';
     }, 1000);
+}
+
+document.getElementById('checkoutForm').addEventListener('submit', function(event){
+    event.preventDefault(); 
+    if (!validateForm()) {
+        return;
+    }
+    const paymentMethod = document.querySelector('input[name="pay"]:checked');
+    if (paymentMethod){
+        if (paymentMethod.id === 'card') {
+            window.location.href = '../templates/payByCard.html';
+        } else {
+            clearCart();
+            window.location.href = '../templates/orderComplete.html';
+        }
+    } else {
+        alert('Please select a payment method.');
+    }
+});
+
+function validateForm() {
+    const requiredFields = ['fullname', 'email', 'phone', 'address', 'city', 'postalcode'];
+    for (let field of requiredFields) {
+        if (!document.getElementById(field).value.trim()) {
+            alert(`Please fill in the ${field} field.`);
+            return false;
+        }
+    }
+    return true;
+}
+
+function clearCart() {
+    localStorage.removeItem('cart');
 }
