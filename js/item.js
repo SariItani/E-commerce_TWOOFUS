@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         teaImageContainer.innerHTML = tea.image;
         const img = teaImageContainer.querySelector('img');
         img.classList.add('tea-image');
+        
 
         const teaBenefits = document.getElementById('teaBenefits');
         tea.benefits.forEach(benefit => {

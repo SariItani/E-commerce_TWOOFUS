@@ -30,11 +30,21 @@ p {
   flex-wrap: wrap;
 }
 
+
+
 #teaImage img {
   width: 300px;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#teaImage img:hover{
+  width: 350px;
+  transition: 0.5s ease-in-out;
+}
+#teaImage img:not(:hover){
+  transition: 0.5s ease-in-out;
 }
 
 .price {
@@ -120,15 +130,25 @@ p {
 }
 
 .description ul {
-  font-size: 14px;
+  font-size: 19px;
   margin: 0;
   padding-top: 10px;
   padding-bottom: 10px;
-}
+  }
+
+
 
 .description h5 {
-  font-size: 20px;
+  font-size: 30px;
+  font-weight: 550;
   margin: 0;
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+
+.description p{
+  font-size: 19px;
+  margin: 10px;
 }
 
 .description {
@@ -151,6 +171,21 @@ p {
   display: flex;
   gap: 50px;
   margin-top: 30px;
+}
+
+#recommendations  img:hover{
+  width: 270px;
+  transition:  0.6s ease-in-out;
+}
+
+#recommendations  img:not(:hover){
+  
+  transition:  0.5s ease-in-out;
+}
+
+#recommendations p{
+  font-size: 17px;
+  font-weight: 600;
 }
 
 .rec-item {
