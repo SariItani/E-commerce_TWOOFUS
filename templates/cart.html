@@ -59,18 +59,22 @@
         <div class="col-md-6">
             <button id="clearCartBtn" class="btn btn-warning">Clear Cart</button>
         </div>
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Order Summary</h5>
-                    <p>Subtotal: $<span id="subtotal">0.00</span></p>
-                    <p>Discount: $<span id="discount">0.00</span></p>
-                    <p>Delivery & Taxes: $<span id="deliveryTaxes">0.00</span></p>
-                    <h6>Final Total: $<span id="finalTotal">0.00</span></h6>
-                    <a href="./checkout.html" id="checkoutBtn" class="btn btn-primary">Proceed to Checkout</a>
-                </div>
-            </div>
-        </div>
+        <div class="row mt-4">
+          <div class="col-md-6">
+              <div class="card">
+                  <div class="card-body">
+                      <h3 class="card-title">Order Summary</h3>
+                      <h5>Subtotal: $<span id="subtotal">0.00</span></h5>
+                      <h5>Discount: $<span id="discount">0.00</span></h5>
+                      <h5>Delivery & Taxes: $<span id="deliveryTaxes">0.00</span></h5>
+                      <h5>Final Total: $<span id="finalTotal">0.00</span></h5>
+                      <div class="col-md-6 d-flex align-items-start flex-column">
+                        <a href="./checkout.html" id="checkoutBtn" class="btn btn-primary">Proceed to Checkout</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>      
     </div>
   </div>
 </body>
