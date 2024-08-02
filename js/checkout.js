@@ -1,34 +1,24 @@
 document.addEventListener('DOMContentLoaded', function() {
-    displayCartItems();
     updateTotalAmount();
 });
-
-function getTotal() {
-    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
-    return cart.reduce((total, item) => total + (parseFloat(item.price) * item.quantity), 0).toFixed(2);
-}
 
 function updateTotalAmount() {
     const totalAmount = document.getElementById("amount");
     totalAmount.innerHTML = "$" + getTotal();
 }
 
-function displayCartItems() {
+function getTotal() {
     const cart = JSON.parse(localStorage.getItem('cart') || '[]');
-    const cartItemsContainer = document.createElement('div');
-    cartItemsContainer.id = 'cartItems';
-    
-    cart.forEach(item => {
-        const itemElement = document.createElement('div');
-        itemElement.innerHTML = `
-            <p>${item.name} - Size: ${item.size}g - Quantity: ${item.quantity} - Price: $${(parseFloat(item.price) * item.quantity).toFixed(2)}</p>
-        `;
-        cartItemsContainer.appendChild(itemElement);
-    });
+    const subtotal =cart.reduce((total, item) => total + (parseFloat(item.price) * item.quantity), 0);
+    const discount = subtotal > 100 ? subtotal * 0.1 : 0;
+    const deliveryTaxes =subtotal > 0 ? 5 : 0;
+    const finalTotal = subtotal - discount + deliveryTaxes;
 
-    const form = document.querySelector('form');
-    const methodsSection = document.querySelector('.methods');
-    form.insertBefore(cartItemsContainer, methodsSection);
+    return finalTotal.toFixed(2);
+}
+
+function clearCart() {
+    localStorage.removeItem('cart');
 }
 
 document.getElementById('checkoutForm').addEventListener('submit', function(event){
@@ -41,6 +31,7 @@ document.getElementById('checkoutForm').addEventListener('submit', function(even
         if (paymentMethod.id === 'card') {
             window.location.href = '../templates/payByCard.html';
         } else {
+            clearCart();
             window.location.href = '../templates/orderComplete.html';
         }
     } else {
