@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/Item.css">
     <link rel="stylesheet" href="../css/checkout.css">
-    <title>Document</title>
+    <title>Checkout</title>
 </head>
 <body>
     <!-- Nav -->
@@ -42,76 +42,110 @@
             </ul>
             <div class="d-flex">
               <input id="serachbar" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit" onclick="search()">Search</button>
+              <button class="btn btn-success" type="submit" onclick="search()">Search</button>
             </div>
           </div>
         </div>
       </nav>
       <div class="container">
-           <form>
-               <div class="row">
-                  <div class="col1">
-                       <h3 class="title">Billing Address</h3>
-                <div class="inputBox">
-                    <label>Full name :</label>
-                    <input type="text" required>
-                </div>
-                <div class="inputBox">
-                    <label>Email :</label>
-                    <input type="email" placeholder="example@example.com" required>
-                </div>
-                <div class="inputBox">
-                    <label>Address :</label>
-                    <input type="text" id="add" placeholder="room - street - locality" required>
-                </div>
-                <div class="inputBox">
-                    <label>City :</label>
-                    <input type="text" placeholder="Los Angeles" required >
-                </div>
-                <div class="flex">
+        <form id="checkoutForm">
+            <div class="row">
+                <div class="col1">
+                    <h3 class="title">Billing Address</h3>
                     <div class="inputBox">
-                        <label>State :</label>
-                        <input type="text" placeholder="California" required>
+                        <label for="fullname">Full name :</label>
+                        <input type="text" id="fullname" placeholder="John M. Doe" required>
                     </div>
                     <div class="inputBox">
-                        <label>Zip code :</label>
-                        <input type="text" placeholder="123 456" required>
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" placeholder="john@example.com" required>
+                    </div>
+                    <div class="inputBox">
+                        <label for="address">Address :</label>
+                        <input type="text" id="address" placeholder="Room - Street - Locality" required>
+                    </div>
+                    <div class="inputBox">
+                        <label for="city">City :</label>
+                        <input type="text" id="city" placeholder="Mumbai" required>
+                    </div>
+                    <div class="flex">
+                        <div class="inputBox">
+                            <label for="state">State :</label>
+                            <input type="text" id="state" placeholder="India" required>
+                        </div>
+                        <div class="inputBox">
+                            <label for="zip">Zip code :</label>
+                            <input type="text" id="zip" placeholder="123 456" required>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class="col2">
-                <h3 class="title">Payment</h3>
-                <div class="inputBox">
-                    <label>Name on card :</label>
-                    <input type="text" >
+            
+            <!-- Payment methods section -->
+            <div class="methods">
+                <div class="method"> 
+                    <label>Cash on delivery</label>
+                    <img src="../static/cash-on-delivery.png" >
+                    <input type="radio" name="pay" id="cash">
                 </div>
-                <div class="inputBox">
-                    <label>Credit card number :</label>
-                    <input type="number" placeholder="1111-2222-3333-4444" required>
+                <div class="method">
+                    <label> Whish</label>
+                    <img class="icon" src="../static/whishmoney.png" >
+                    <input type="radio" name="pay" id="whish">
                 </div>
-                <div class="flex">
-                    <div class="inputBox">
-                        <label>Expiry date :</label>
-                        <input type="date"  required>
-                    </div>
-                    <div class="inputBox">
-                        <label>CVV :</label>
-                        <input type="text" placeholder="1234" required>
-                    </div>
-                    <div>
-                        <label>Total Amount:</label>
-                        <p id="amount"></p>
-                    </div>
-                    <input type="submit" value="Proceed to checkout" class="submit-btn">
+                <div class="method">
+                    <label>Card</label>
+                    <img src="../static/atm-card.png" >
+                    <input type="radio" name="pay" id="card">
+                </div>
+                <div class="method">
+                    <label> OMT</label>
+                    <img class="icon" src="../static/new_omt_logo.svg">
+                    <input type="radio" name="pay" id="omt">
                 </div>
             </div>
-        </div>
-    </form>
-    
-</div>    
+        
+            <h2 class="title">Total Amount: <span id="amount"></span></h2>
+        
+            <input type="submit" value="Proceed to Checkout" class="submitbtn">
+        </form>
+    </div> 
 <script src="../js/checkout.js"></script> 
 </body>
+<footer>
+  <div class="container1">
+    <div class="footer-section">
+      <ul class="social-icons">
+        <li><a href="https://facebook.com" target="_blank"><i class="fa fa-facebook"></i> Facebook</a></li>
+        <li><a href="https://instagram.com" target="_blank"><i class="fa fa-instagram"></i> Instagram</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <ul>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Refunds & Replacement</a></li>
+        <li><a href="#">About Tea House </a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <ul>
+        <li><i class="fa fa-map-marker"></i>First Branch Location</li>
+        <li><i class="fa fa-map-marker"></i>Second Branch Location</li>
+        <li><i class="fa fa-phone"></i> 00961 71 806438</li>
+        <li><i class="fa fa-envelope"></i> tea@teahouse.com</li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <ul>
+        <li>Shipping All Over Lebanon</li>
+        <li>Delivery within two working days.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>Copyright Tea House | by Mr. Website</p>
+  </div>
+</footer>
 <script src="../js/index.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 

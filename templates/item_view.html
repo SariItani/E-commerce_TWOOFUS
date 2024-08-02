@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
     <link rel="stylesheet" href="../css/Item.css">
+    <title>Item</title>
 </head>
 <body>
     <!-- Nav -->
@@ -42,128 +43,115 @@
             </ul>
             <div class="d-flex">
               <input id="serachbar" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit" onclick="search()">Search</button>
+              <button class="btn btn-success" type="submit" onclick="search()">Search</button>
             </div>
           </div>
         </div>
       </nav>
-      <!-- Content: Ali and Saja -->
-    <div class="Item-pic-price">
-        <div class="pic">
-            <img src="../static/Turmeric_Matcha_1.png" >
-        </div>
-        <div class="price">
-            <h3 id="main_item">TURMERIC MATCHA</h3>
-            <p id="main_price">15.00$</p>
-            <form id="priceForm">
-                <div class="size-input">
-                    
-                    <label for="size">SIZE:</label>
-                    <select id="size" name="size">
-                        <option value="Select" disabled>Select a Size</option>
-                        <option value="50">50g</option>
-                        <option value="100">100g</option>
-                        <option value="200">200g</option>
-                    </select>
-                </div>
-                    
-                <div class="quantity-input">
-                    <label for="quantity">QUNATITY:</label>
-                    <input type="number" name="quantity" id="quantity" max="10">
-                </div>
+  <!--This is the page that will load each type by its own so now no need for multiple html pages (inno a page for each type)-->
 
-                <div class="favorite-add-btn">
-                    <button>♡</button>
-                    <button>Add To Cart</button>
-                </div>
-                 
-             </form>
-        </div>
-
-        
-    </div>
-
-
-    <div class="description">
-        <h5>Description:</h5>
-        <p>whether you’re trying to lose weight or just enjoy the naturally wholesome flavors, allow this tea to become the cherry on top for your healthy journey.</p>
-        <h5>How to prepare?</h5>
-        <p>Pour 100 °C water over 1.5 grams of tea leaves per cup and infuse for 3 minutes. Remove leaves and enjoy.</p>
-        <h5>Ingredients:</h5>
-        <p>Matcha, turmeric, ginger, lemongrass, liquorice roots, orange peel and lemon peel        </p>
-        <h5>Benefits:</h5>
-        <p>• boosts energy level • detoxifies the body • aids in weight loss boosts • immunity • prevents arthritis and rheumatism • boosts brain function</p>
-    </div>
-
-
-    <div class="recomended">
-        <h3 >YOU MIGHT ALSO LIKE</h3>
-    </div>    
+  <div class="Item-pic-price">
     
+    <div id="teaImage" class ="pic"></div>
+<!-- Sari Started Editing Here -->
+    <div class="price">
+      <h1 id="teaName"></h1>
+      <p id="teaPrice"></p>
+      
+      <div class="size-input">
+        <label for="size">SIZE:</label>
+        <select id="size" name="size">
+          <option value="Select" disabled selected>Select a Size</option>
+          <option value="50">50g</option>
+          <option value="100">100g</option>
+          <option value="200">200g</option>
+        </select>
+      </div>
+        
+      <div class="quantity-input">
+        <label for="quantity">QUANTITY:</label>
+        <input type="number" name="quantity" id="quantity" max="10" min="1" value="1">
+      </div>
     
-    <div class="rec-item">
-
-        <div class="product">
-            <div class="rec-product-img">
-                <a href="../templates/balanceHerbal.html"><img src="../static/HerbalBalance.png" ><br></a>
-            
-            </div>
-            <div class="rec-product-info">
-                <p>BALANCE HERBAL INFUSION</p><br>
-                <p>15.00$</p>  
-            </div> 
-        </div>
-
-        <div class="product">
-            <div class="rec-product-img">
-                <a href="../templates/gyokuroAsahi.html"><img src="../static/GYOKURO-ASAHI.jpg" ><br></a>
-            
-            </div>
-            <div class="rec-product-info">
-                <p>ORGANIC GYOKURO ASAHI PREMIUM JAPANESE GREEN TEA</p><br>
-                <p>36.00$</p>  
-            </div>
-        </div>
-
-        <div class="product">
-            <div class="rec-product-img">
-                <a href="../templates/eternitealherbal.html"><img src="../static/Eterniteal_1.png" ><br></a>
-            
-            </div>
-            <div class="rec-product-info">
-                <p>ETERNITEA’L HERBAL INFUSION</p><br>
-                <p>15.00$</p>  
-            </div>
-        </div>
-
-        <div class="product">
-            <div class="rec-product-img">
-                <a href="../templates/cinnamonOrange.html"><img src="../static/CinnamonOrange.png" ><br></a>
-            
-            </div>
-            <div class="rec-product-info">
-                <p>CINNAMON ORANGE GREEN TEA</p><br>
-                <p>15.00$</p>  
-            </div>
-        </div>
-
-        <div class="product">
-            <div class="rec-product-img">
-                <a href="../templates/spicyRooibos.html"><img src="../static/Spicy_Rooibois_1.png" ><br></a>
-            
-            </div>
-            <div class="rec-product-info">
-                <p>SPICY ROOIBOS</p><br>
-                <p>15.00$</p>  
-            </div>
-        </div>
-        
-
-        
+      <div class="favorite-add-btn">
+        <button id="favoriteBtn" onclick="toggle()">♡</button>
+        <button id="addToCartBtn">Add To Cart</button>
+      </div>
     </div>
+  <!-- Here sari's edits ended -->
+  </div>
 
+
+
+<div class="description">
+  <h5>Description:</h5>
+  <p id="teaDescription"></p>
+  <h5>How To Prepare?</h5>
+  <p id="teaPreparation"></p>
+  <h5>Ingredients:</h5>
+  <p id="teaIngredients"></p>
+  <h5>Benefits:</h5>
+  <p id="teaBenefits"></p>
+</div>
+
+
+
+<div class="recommended">
+  <h3>YOU MIGHT ALSO LIKE</h3>
+  <div id="recommendations"></div>
+</div>
+
+
+  <script src="../js/index.js"></script> <!-- Always add the index js and css files -->
+  <script src="../js/item.js"></script>
+  <script src="../js/cart.js"></script>
 </body>
-<script src="../js/item.js"></script>
-<script src="../js/index.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<footer>
+  <div class="container1">
+    <div class="footer-section">
+      <ul class="social-icons">
+        <li><a href="https://facebook.com" target="_blank"><i class="fa fa-facebook"></i> Facebook</a></li>
+        <li><a href="https://instagram.com" target="_blank"><i class="fa fa-instagram"></i> Instagram</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <ul>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Refunds & Replacement</a></li>
+        <li><a href="#">About Tea House </a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <ul>
+        <li><i class="fa fa-map-marker"></i>First Branch Location</li>
+        <li><i class="fa fa-map-marker"></i>Second Branch Location</li>
+        <li><i class="fa fa-phone"></i> 00961 71 806438</li>
+        <li><i class="fa fa-envelope"></i> tea@teahouse.com</li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <ul>
+        <li>Shipping All Over Lebanon</li>
+        <li>Delivery within two working days.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>Copyright Tea House | by Mr. Website</p>
+  </div>
+</footer>
 </html>
+
+<style>
+  .tea-image {
+      width: 100px;
+      height: auto;
+  } 
+
+
+/*  .recommendations-image {
+            width: 200px;
+            height: auto;
+            cursor: pointer;
+        }*/
+</style> 

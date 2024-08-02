@@ -1,0 +1,117 @@
+
+.login-container {
+    min-width: 100%;
+    padding: 10%;
+    padding-top:40px;
+    margin :0 auto;
+}
+
+.account-title {
+    
+    font-size: 30px;
+    color: #333;
+    text-align: left;
+    padding-left:5%;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.login-box {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+
+.login-title {
+    font-size: 35px;
+    color: #333;
+}
+
+.welcome-message {
+    font-size: 14px;
+    color: #888;
+    text-align: center;
+    
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+   
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-group input[type="text"]:hover,
+.form-group input[type="password"]:hover {
+    border-bottom: 1px solid #333;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="password"]:focus {
+
+    border-bottom: 1px solid #333;
+}
+
+.form-group.remember-me {
+    display: flex;
+   
+    align-items: center;
+    margin-top: 10px;
+}
+
+.form-group.remember-me label {
+   
+    font-size: 14px;
+    color: #333;
+    margin-left: 5px;
+}
+
+.btn-log {
+    
+    padding:10px 20px ;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-log:hover {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #333;
+}
+
+.lost-password {
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    text-align: left;
+}
+
+.lost-password:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+}
+
+
+

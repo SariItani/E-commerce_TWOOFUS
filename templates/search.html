@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/category.css">
+    <title>Search Results</title>
+</head>
+
+<body>
+    <!-- Nav -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html">
+                <img src="../static/logo.png" alt="" width="100" height="100">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Account
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./signup.html"><i class="fa fa-user" aria-hidden="true"></i> Sign Up</a></li>
+                            <li><a class="dropdown-item" href="./login.html"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Logout <i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <input id="serachbar" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-success" type="submit" onclick="search()">Search</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content: Sari and Zeinab -->
+    <h1 id="search-title">Search Results</h1>
+    <div class="product-grid" id="search-results"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container1">
+            <div class="footer-section">
+                <ul class="social-icons">
+                    <li><a href="https://facebook.com" target="_blank"><i class="fa fa-facebook"></i> Facebook</a></li>
+                    <li><a href="https://instagram.com" target="_blank"><i class="fa fa-instagram"></i> Instagram</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <ul>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Refunds & Replacement</a></li>
+                    <li><a href="#">About Tea House </a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <ul>
+                    <li><i class="fa fa-map-marker"></i>First Branch Location</li>
+                    <li><i class="fa fa-map-marker"></i>Second Branch Location</li>
+                    <li><i class="fa fa-phone"></i> 00961 71 806438</li>
+                    <li><i class="fa fa-envelope"></i> tea@teahouse.com</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <ul>
+                    <li>Shipping All Over Lebanon</li>
+                    <li>Delivery within two working days.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright Tea House | by Mr. Website</p>
+        </div>
+    </footer>
+    <script src="../js/index.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>
