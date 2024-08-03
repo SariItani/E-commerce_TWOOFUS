@@ -64,6 +64,41 @@ h1 {
     background-color: #556B2F;
 }
 
+/* Price range section styles */
+.price-range-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.price-range-section label {
+    margin: 0 10px;
+    color: #556B2F;
+}
+
+.price-range-section input[type="number"] {
+    width: 80px;
+    padding: 5px;
+    margin: 0 10px;
+    border: 1px solid #A68A64;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.price-range-section .btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #8AA387;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.price-range-section .btn:hover {
+    background-color: #556B2F;
+}
+
 /* Store products styles */
 #store-products {
     display: flex;
