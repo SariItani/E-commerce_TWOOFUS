@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+    <link rel="stylesheet" href="../css/filter.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Filter Page</h1>
+            <div class="search-section">
+                <form action="" onsubmit="return false">
+                    <input type="text" id="search" placeholder="Search Product">
+                </form>
+            </div>
+            <div class="filter-box">
+                <a href="#" class="btn active" data-filter="all">ALL</a>
+                <a href="#" class="btn" data-filter="greentea">GREEN TEA</a>
+                <a href="#" class="btn" data-filter="blackteaa">BLACK TEA</a>
+                <a href="#" class="btn" data-filter="whitetea">WHITE TEA</a>
+                <a href="#" class="btn" data-filter="herbaltea">HERBAL TEA</a>
+                <a href="#" class="btn" data-filter="matchablends">MATCHA BLENDS</a>
+                <a href="#" class="btn" data-filter="rooiboshoneybush">ROOIBOS & HONEY BUSH</a>
+                <a href="#" class="btn" data-filter="fruitblends">FRUIT BLENDS</a>
+                <a href="#" class="btn" data-filter="premiumoolong">PREMIUM OOLONG</a>
+            </div>
+        </div>
+    </header>
+    <section class="container" id="store-products"></section>
+    <script src="../js/filter.js"></script>
+</body>
+</html>

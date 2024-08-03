@@ -15,30 +15,30 @@ document.addEventListener('DOMContentLoaded', () => {
             { id: 10, name: "FINEST GOLDEN TIPS PREMIUM BLACK TEA", price: "30$", image: "../static/Golden.jpg" },
         ],
         whitetea: [
-            { id: 11, name: "SILVER NEEDLE WHITE TEA", price: "30$", image: "../static/" },
-            { id: 12, name: "WHITE SILK WHITE TEA", price: "15$", image: "../static/" },
-            { id: 13, name: "WHITE WINGS WHITE TEA", price: "18$", image: "../static/" },
+            { id: 11, name: "SILVER NEEDLE WHITE TEA", price: "30$", image: "../static/WhiteTea.jpg" },
+            { id: 12, name: "WHITE SILK WHITE TEA", price: "15$", image: "../static/WhiteTea.jpg" },
+            { id: 13, name: "WHITE WINGS WHITE TEA", price: "18$", image: "../static/WhiteTea.jpg" },
         ],
         herbaltea: [
-            { id: 14, name: "BALANCE HERBAL INFUSION", price: "15$", image: "../static/" },
-            { id: 15, name: "ESCAPE TO NATURE HERBAL INFUSION", price: "15$", image: "../static/" },
-            { id: 16, name: "SIMPLY TEA TOX HERBAL INFUSION", price: "12$", image: "../static/" },
-            { id: 17, name: "WELL BEING HERBAL INFUSION", price: "15$", image: "../static/" },
+            { id: 14, name: "BALANCE HERBAL INFUSION", price: "15$", image: "../static/HerbalTea.jpg" },
+            { id: 15, name: "ESCAPE TO NATURE HERBAL INFUSION", price: "15$", image: "../static/HerbalTea.jpg" },
+            { id: 16, name: "SIMPLY TEA TOX HERBAL INFUSION", price: "12$", image: "../static/HerbalTea.jpg" },
+            { id: 17, name: "WELL BEING HERBAL INFUSION", price: "15$", image: "../static/HerbalTea.jpg" },
         ],
         matchablends: [
-            { id: 18, name: "ORGANIC MATCHA PREMIUM JAPANESE GREEN TEA", price: "38$", image: "../static/" },
-            { id: 19, name: "TURMERIC MATCHA", price: "15$", image: "../static/" },
+            { id: 18, name: "ORGANIC MATCHA PREMIUM JAPANESE GREEN TEA", price: "38$", image: "../static/MatchaBlends.jpg" },
+            { id: 19, name: "TURMERIC MATCHA", price: "15$", image: "../static/MatchaBlends.jpg" },
         ],
         rooiboshoneybush: [
-            { id: 20, name: "HONEY BUSH", price: "15$", image: "../static/" },
-            { id: 21, name: "ROOIBOS BLOSSOM", price: "15$", image: "../static/" },
-            { id: 22, name: "SPICY ROOIBOS", price: "15$", image: "../static/" },
+            { id: 20, name: "HONEY BUSH", price: "15$", image: "../static/RooibosHoneyBush.jpg" },
+            { id: 21, name: "ROOIBOS BLOSSOM", price: "15$", image: "../static/RooibosHoneyBush.jpg" },
+            { id: 22, name: "SPICY ROOIBOS", price: "15$", image: "../static/RooibosHoneyBush.jpg" },
         ],
         fruitblends: [
-            { id: 23, name: "MIXED BERRIES FRUIT BLEND", price: "15$", image: "../static/" },
+            { id: 23, name: "MIXED BERRIES FRUIT BLEND", price: "15$", image: "../static/FruitBlends.jpg" },
         ],
         premiumoolong: [
-            { id: 24, name: "ROYAL ORCHID PREMIUM OOLONG TEA", price: "30$", image: "../static/" },
+            { id: 24, name: "ROYAL ORCHID PREMIUM OOLONG TEA", price: "30$", image: "../static/PremiumOolong.jpg" },
         ]
     };
 
