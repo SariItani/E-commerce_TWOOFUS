@@ -1,45 +1,44 @@
 .hero {
-    background-color: rgb(34, 37, 37);
-    color: var( --dark-moss-green);
-    max-width: 2000px;
-    text-align: center;
-    padding: 9rem 0;
-  }
-  
-  .hero .container {
-    max-width: 2000px;
-    margin: 10 auto;
-    font-family: 'Playfair Display', serif
-  }
-  .hero-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10rem;}
-    .text-content {
-      max-width: 600px;
-  }
-  
-  .text-content h2 {
-      font-size: 7rem;
-      margin-bottom: 1rem;
-  }
-  
-  .text-content p {
-      font-size: 2rem;
-      margin-bottom: 2rem;
-  }
-  
-  .cta-button {
-      background-color: var(--cambridge-blue);
-      color: var(--white);
-      padding: 1rem 2rem;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-  }
-  
-  
+  background-image: url('../static/elevated-view-herbal-tea-it-s-ingredient-black-textured-surface.jpg');
+  background-size: cover;
+  color:#9fc759;
+  text-align: left;
+  padding: 9rem 0;
+  height: 90vh;
+}
+
+.hero .container {
+  max-width: 2000px; 
+  margin: 10 auto;
+  font-family: 'Playfair Display', serif;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  gap: 10rem;
+}
+
+.text-content {
+  max-width: 700px;
+}
+
+.text-content h2 {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  text-align: left;
+  padding-left: 150px;
+}
+
+.text-content p {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: left;
+  padding-left: 150px;
+}
+
   .side-image {
     width: 300px;
     height: auto;
