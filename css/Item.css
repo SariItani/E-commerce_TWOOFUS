@@ -40,10 +40,10 @@ p {
 
 #teaImage img:hover{
   width: 380px;
-  transition: 0.3s ease-in-out;
+  transition: 0.15s ease-in-out;
 }
 #teaImage img:not(:hover){
-  transition: 0.3s ease-in-out;
+  transition: 0.15s ease-in-out;
 }
 
 .price {
@@ -154,12 +154,12 @@ p {
 
 #recommendations  img:hover{
   width: 270px;
-  transition:  0.3s ease-in-out;
+  transition:  0.15s ease-in-out;
 }
 
 #recommendations  img:not(:hover){
   
-  transition:  0.3s ease-in-out;
+  transition:  0.15s ease-in-out;
 }
 
 #recommendations p{
