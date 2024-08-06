@@ -13,10 +13,17 @@ function logoutUser() {
   window.location.href = './login.html';
 }
 
+function authUser() {
+  if (!sessionStorage.getItem('username')) {
+    window.location.href = './login.html';
+  }
+}
+
 
 
 //related to saja and ali's part 
 document.addEventListener('DOMContentLoaded', () => {
+  authUser();
   // Search bar input field
   const searchbar = document.getElementById("serachbar");
 
