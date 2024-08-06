@@ -35,6 +35,11 @@
     font-size: 14px;
     outline: none;
 }
+small{
+    font-size:10px;
+    color:green;
+    margin-bottom: 30px;
+  }
 .signup-container input:hover{
 border-bottom: 1px solid #333;
 }
@@ -79,10 +84,12 @@ border-bottom: 1px solid #333;
     .lost-password {
         display: block;
         margin-top: 15px;
+        padding-left:5%;
         font-size: 14px;
         color: #333;
         text-decoration: none;
         text-align: left;
+     
     }
     
     .lost-password:hover {

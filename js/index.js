@@ -3,6 +3,15 @@ function search() {
   var searchString = searchbar.value.trim().toLowerCase();
   window.location.href = `search.html?q=${encodeURIComponent(searchString)}`;
 }
+function logoutUser() {
+
+  if (sessionStorage.getItem('username')) {
+      sessionStorage.removeItem('username');
+  } 
+  
+
+  window.location.href = './login.html';
+}
 
 
 

@@ -1,4 +1,19 @@
-document.getElementById('signupForm').addEventListener('submit', function(e) {
+
+async function hashPassword(password) {
+    // Encode the password as a Uint8Array
+    const encoder = new TextEncoder();
+    const data = encoder.encode(password);
+
+    // Hash the data using SHA-256
+    const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+
+    // Convert the hash to a hex string
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    const hashHex = hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
+
+    return hashHex;
+}
+document.getElementById('signupForm').addEventListener('submit', async function(e) {
     e.preventDefault();
 
     let name = document.getElementById('name').value;
@@ -32,15 +47,17 @@ document.getElementById('signupForm').addEventListener('submit', function(e) {
         phoneError.hidden = false;
     }
     if (!emailExists && !phoneExists) {
-        let newUser = {
-            name: name,
-            email: email,
-            phone: phone,
-            password: password
-        };
+        let hashedPassword = await hashPassword(password);
+                let newUser = {
+                    name: name,
+                    email: email,
+                    phone: phone,
+                    password: hashedPassword
+                };
 
         users.push(newUser);
         localStorage.setItem('users', JSON.stringify(users));
+       
         successMessage.hidden = false;
         setTimeout(() => {
             successMessage.hidden = true;
