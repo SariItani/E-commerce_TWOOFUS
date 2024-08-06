@@ -106,9 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
                       // Debug: Check the new rating input
                       console.log('New rating input:', newRating);
 
-                          // Update the rating and nbOfRates
-                         nbOfRates += 1;
-                          tea.rating = ((tea.rating * (nbOfRates - 1)) + newRating) / nbOfRates;
+                          tea.rating = newRating
 
                           // Debug: Check updated rating
                           console.log('Updated rating:', tea.rating);
