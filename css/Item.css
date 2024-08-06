@@ -220,3 +220,18 @@ p {
 .favorite-add-btn:hover .red {
   background-color: darkred;
 }
+
+
+.hidden {
+  display: none;
+}
+
+.star {
+  font-size: 2em;
+  cursor: pointer;
+  color: gray;
+}
+
+.star.selected {
+  color: gold;
+}
