@@ -60,7 +60,7 @@
     <div class="price">
       <h1 id="teaName"></h1>
       <p id="teaPrice"></p>
-      
+       <p>Rating: <span id="teaRating"></span></p>
       <div class="size-input">
         <label for="size">SIZE:</label>
         <select id="size" name="size">
@@ -69,16 +69,27 @@
           <option value="100">100g</option>
           <option value="200">200g</option>
         </select>
-      </div>
-        
+       
+    </div>
+ 
+
       <div class="quantity-input">
         <label for="quantity">QUANTITY:</label>
         <input type="number" name="quantity" id="quantity" max="10" min="1" value="1">
       </div>
     
+      
       <div class="favorite-add-btn">
-        <button id="favoriteBtn" onclick="toggle()">♡</button>
+       <!-- <button id="favoriteBtn" onclick="toggle()">♡</button> I commented this because i don't believe it has a need anymore-->
         <button id="addToCartBtn">Add To Cart</button>
+     <!--Saja's Rating -->   <button id="rateButton" >Rate</button>
+        <div id="ratingContainer" class="hidden">
+            <span class="star" data-value="1">★</span> 
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+        </div>
       </div>
     </div>
   <!-- Here sari's edits ended -->
