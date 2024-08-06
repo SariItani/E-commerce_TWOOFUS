@@ -1,0 +1,143 @@
+/* search.css */
+
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    background-color: #F5F5DC;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Page Titles */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #556B2F;
+}
+
+/* Filter Box */
+.filter-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.filter-box .btn {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #8AA387;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.filter-box .btn:hover {
+    background-color: #556B2F;
+}
+
+.filter-box .btn.active {
+    background-color: #556B2F;
+}
+
+/* Price Range Section */
+.price-range-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.price-range-section label {
+    margin: 0 10px;
+    color: #556B2F;
+}
+
+.price-range-section .price-slider {
+    width: 50%;
+    margin: 20px auto;
+}
+
+.price-range-section .price-values {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+/* Product Grid */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product-card h3 {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.product-card p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #888;
+}
+
+.product-card button {
+    margin-top: 10px;
+    background-color: #556b2f;
+    border-color: #556b2f;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .filter-box {
+        flex-direction: column;
+    }
+    
+    .filter-box .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .price-range-section .price-slider {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .price-range-section .price-slider {
+        width: 100%;
+    }
+}
