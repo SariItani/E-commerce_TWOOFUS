@@ -14,6 +14,7 @@
         "prevents diabetes"
       ],
       "image": "<img src=\"../static/CinnamonOrange.png\" >",
+      "rating":2.5 ,
       "category": "GREEN TEA"
     },
     {
@@ -32,6 +33,7 @@
         "boosts brain function"
       ],
       "image": "<img src=\"../static/Turmeric_Matcha.png\" >",
+      "rating":2.5 ,
       "category": "GREEN TEA"
     },
     {
@@ -48,6 +50,7 @@
         "aids digestion"
       ],
       "image": "<img src=\"../static/EarlGreyGreen.png\" >",
+      "rating":2.5 ,
       "category": "GREEN TEA"
     },
     {
@@ -64,6 +67,7 @@
         "promotes a healthy skin"
       ],
       "image": "<img src=\"../static/GingerPineApple.png\" >",
+      "rating":2.5 ,
       "category": "GREEN TEA"
     },
     {
@@ -80,6 +84,7 @@
         "improves focus"
       ],
       "image": "<img src=\"../static/Vitality.png\" >",
+      "rating":2.5 ,
       "category": "GREEN TEA"
     },
     {
@@ -97,6 +102,7 @@
         "prevents cancer"
       ],
       "image": "<img src=\"../static/Matcha_Berries.png\" >",
+      "rating":2.5 ,
       "category": "GREEN TEA"
     }
   ],
@@ -117,6 +123,7 @@
         "improves digestion"
       ],
       "image": "<img src=\"../static/BlackCurrentGreen.png\">",
+      "rating":2.5 ,
       "category": "BLACK TEA"
     },
     {
@@ -133,6 +140,7 @@
         "improves focus"
       ],
       "image": "<img src=\"../static/BlueFlower.png\">",
+      "rating":2.5 ,
       "category": "BLACK TEA"
     },
     {
@@ -149,6 +157,7 @@
         "improves focus"
       ],
       "image": "<img src=\"../static/VANILLA-CLASSIC.png\">",
+      "rating":2.5 ,
       "category": "BLACK TEA"
     },
     {
@@ -165,6 +174,7 @@
         "reduces the rate of cholesterol"
       ],
       "image": "<img src=\"../static/Golden.png\">",
+      "rating":2.5 ,
       "category": "BLACK TEA"
     }
   ],
@@ -184,6 +194,7 @@
         "balances level of cholesterol"
       ],
       "image": "<img src=\"../static/Silver_needle.png\">",
+      "rating":2.5 ,
       "category": "WHITE TEA"
     },
     {
@@ -200,6 +211,7 @@
         "reduces inflammation"
       ],
       "image": "<img src=\"../static/White_Silk.png\">",
+     "rating":2.5 ,
       "category": "WHITE TEA"
     },
     {
@@ -216,6 +228,7 @@
         "balances level of cholesterol"
       ],
       "image": "<img src=\"../static/White_Wing.png\">",
+      "rating":2.5 ,
       "category": "WHITE TEA"
     }
   ],
@@ -236,6 +249,7 @@
         "boosts antioxidant levels"
       ],
       "image": "<img src=\"../static/mixed-berries.png\">",
+      "rating":2.5 ,
       "category": "FRUIT BLENDS"
     }
   ],
@@ -253,6 +267,7 @@
       "Matcha is rich with Vitamin A as well as L-Theanine, which in combination with caffeine, promotes focused alertness.",
       " Calm energy concentration that lasts much longer than with coffee."],
       "image": "<img src=\"../static/MATCHA.png\" >",
+      "rating":2.5 ,
       "category": "MATCHA BLENDS"
     },
     {
@@ -271,6 +286,7 @@
         "boosts brain function"
       ],
       "image": "<img src=\"../static/Turmeric_Matcha.png\" >",
+      "rating":2.5 ,
       "category": "MATCHA BLENDS"
     }
   ],
@@ -292,6 +308,7 @@
         "detoxifies the body"
       ],
       "image": "<img src=\"../static/HerbalBalance.png\" >",
+      "rating":2.5 ,
       "category": "HERBAL TEA"
     },
     {
@@ -310,6 +327,7 @@
         "improves digestion"
       ],
       "image": "<img src=\"../static/Escape.png\" >",
+      "rating":2.5 ,
       "category": "HERBAL TEA"
     },
     {
@@ -326,6 +344,7 @@
         "detoxifies the body"
       ],
       "image": "<img src=\"../static/Simply_1.png\" >",
+      "rating":2.5 ,
       "category": "HERBAL TEA"
     },
     {
@@ -343,6 +362,7 @@
         "reduces nausea"
       ],
       "image": "<img src=\"../static/Wellbeing.png\" >",
+      "rating":2.5 ,
       "category": "HERBAL TEA"
     }
   ],
@@ -363,6 +383,7 @@
         "helps treat menopause symptoms"
       ],
       "image": "<img src=\"../static/HoneyBush.png\" >",
+      "rating":2.5 ,
       "category": "ROOIBOS & HONEY BUSH"
     },
     {
@@ -380,6 +401,7 @@
         "rich in magnesium and iron"
       ],
       "image": "<img src=\"../static/Blossom.png\" >",
+      "rating":2.5 ,
       "category": "ROOIBOS & HONEY BUSH"
     },
     {
@@ -398,6 +420,7 @@
         "rich in magnesium and iron"
       ],
       "image": "<img src=\"../static/SpicyRooibois.png\" >",
+      "rating":2.5 ,
       "category": "ROOIBOS & HONEY BUSH"
     }
   ],
@@ -418,6 +441,7 @@
         "helps manage stress"
       ],
       "image": "<img src=\"../static/Royal_Orchid.png\" >",
+      "rating":2.5 ,
       "category": "PREMIUM OOLONG"
     }
   ]
