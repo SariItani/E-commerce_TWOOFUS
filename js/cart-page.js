@@ -125,7 +125,3 @@ function validateForm() {
     }
     return true;
 }
-
-function clearCart() {
-    localStorage.removeItem('cart');
-}

@@ -80,11 +80,16 @@
         </form>
     </div>
     <script>
-        document.getElementById("complete").addEventListener('submit',function(event){
-            event.preventDefault(); 
-            window.location.href= 'orderComplete.html';
-        });
-    </script>
+      document.getElementById("complete").addEventListener('submit', function(event) {
+          event.preventDefault();
+          clearCart(); // Clear the cart after successful payment
+          window.location.href = 'orderComplete.html';
+      });
+
+      function clearCart() {
+          localStorage.removeItem('cart');
+      }
+  </script>
     <script src="../js/checkout.js"></script> 
 </body>
 <footer class="mt-4">
